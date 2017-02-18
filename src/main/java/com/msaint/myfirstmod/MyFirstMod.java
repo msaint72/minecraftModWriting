@@ -1,7 +1,10 @@
 package com.msaint.myfirstmod;
 
+import com.msaint.myfirstmod.init.Items;
 import com.msaint.myfirstmod.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -32,4 +35,13 @@ public class MyFirstMod {
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}
+
+	public static CreativeTabs tabMayFirstMod = new CreativeTabs(MyFirstMod.MODID + ":" + "creative_tab") {
+
+		@Override
+		public ItemStack getTabIconItem() {
+
+			return new ItemStack(Items.redingotItem);
+		}
+	};
 }

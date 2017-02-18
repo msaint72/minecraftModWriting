@@ -1,2 +1,5 @@
 #Items
 item.redingot_item.name=Redingot Item
+#
+# Creative Tab
+itemGroup.myfirstmod:creative_tab=MyFirst Mod's Tab
