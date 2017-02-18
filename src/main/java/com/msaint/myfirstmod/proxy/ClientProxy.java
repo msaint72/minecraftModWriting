@@ -1,6 +1,7 @@
 package com.msaint.myfirstmod.proxy;
 
 import com.msaint.myfirstmod.MyFirstMod;
+import com.msaint.myfirstmod.init.Items;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -27,9 +28,9 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	@Override
-	public void registerItemModel(Item item, int i, String name) {
-		ModelLoader.setCustomModelResourceLocation(item, 0,
-				new ModelResourceLocation(MyFirstMod.MODID + ":" + name , "inventory"));
-
+	public void registerItemModel(Item item, int temp, String name) {
+		ModelResourceLocation model = new ModelResourceLocation(MyFirstMod.MODID + ":" + name, "inventory");
+		ModelLoader.setCustomModelResourceLocation(item, temp, model);
 	}
+
 }

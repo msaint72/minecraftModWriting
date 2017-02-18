@@ -7,13 +7,12 @@ import net.minecraft.item.Item;
 
 public class ItemRedingot extends Item {
 	protected String name;
+
 	public ItemRedingot(String unlocalizedName) {
 		super();
-		name=unlocalizedName;
+
+		name = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(CreativeTabs.MATERIALS);		
-	}
-	public void registerItemModel() {
-		MyFirstMod.proxy.registerItemModel(this, 0, name);
+		this.setCreativeTab(CreativeTabs.MATERIALS);
 	}
 }
