@@ -1,2 +1,8 @@
 #Items
 item.redingot_item.name=Redingot Parçası
+# Blocks
+# tile.myfirstmod:red_ore_block.name=Red Ore Block
+tile.red_ore_block.name=Red Ore Bloğu
+
+# Creative Tab
+itemGroup.myfirstmod:creative_tab=İlk mod sekmem
