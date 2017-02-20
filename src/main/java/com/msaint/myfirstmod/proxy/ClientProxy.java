@@ -1,7 +1,7 @@
 package com.msaint.myfirstmod.proxy;
 
 import com.msaint.myfirstmod.MyFirstMod;
-import com.msaint.myfirstmod.init.Items;
+import com.msaint.myfirstmod.init.ModItems;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

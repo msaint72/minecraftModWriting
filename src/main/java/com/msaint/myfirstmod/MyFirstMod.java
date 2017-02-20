@@ -1,6 +1,6 @@
 package com.msaint.myfirstmod;
 
-import com.msaint.myfirstmod.init.Items;
+import com.msaint.myfirstmod.init.ModItems;
 import com.msaint.myfirstmod.proxy.CommonProxy;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -36,12 +36,12 @@ public class MyFirstMod {
 		proxy.postInit(event);
 	}
 
-	public static CreativeTabs tabMayFirstMod = new CreativeTabs(MyFirstMod.MODID + ":" + "creative_tab") {
+	public static CreativeTabs tabMyFirstMod = new CreativeTabs(MyFirstMod.MODID + ":" + "creative_tab") {
 
 		@Override
 		public ItemStack getTabIconItem() {
 
-			return new ItemStack(Items.redingotItem);
+			return new ItemStack(ModItems.redingotItem);
 		}
 	};
 }

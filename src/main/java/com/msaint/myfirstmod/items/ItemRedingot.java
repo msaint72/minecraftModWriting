@@ -13,6 +13,6 @@ public class ItemRedingot extends Item {
 
 		name = unlocalizedName;
 		this.setUnlocalizedName(unlocalizedName);
-		this.setCreativeTab(MyFirstMod.tabMayFirstMod);
+		this.setCreativeTab(MyFirstMod.tabMyFirstMod);
 	}
 }
