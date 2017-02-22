@@ -12,8 +12,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("CommonProxy:preInit");
-		ModItems.init();
 		ModBlocks.init();
+		ModItems.init();
 	}
 
 	public void init(FMLInitializationEvent event) {
