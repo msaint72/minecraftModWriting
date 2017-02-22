@@ -3,6 +3,8 @@ item.redingot_item.name=Redingot Item
 item.tomato_item.name=Tomato
 item.tomato_seed_item.name=Tomato Seed
 
+#tools
+item.redingot_sword_item.name=Redingot Sword
 
 # Blocks
 # tile.myfirstmod:red_ore_block.name=Red Ore Block
