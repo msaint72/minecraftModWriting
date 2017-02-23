@@ -1,0 +1,6 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "myfirstmod:items/redingot_hoe"
+	}
+}
