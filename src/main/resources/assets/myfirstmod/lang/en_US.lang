@@ -10,6 +10,12 @@ item.redingot_axe_item.name=Redingot Axe
 item.redingot_shovel_item.name=Redingot Shovel
 item.redingot_hoe_item.name=Redingot Hoe
 
+#armor
+item.redingot_helmet_item.name=Redingot Helmet
+item.redingot_chestplate_item.name=Redingot Chestplate
+item.redingot_leggings_item.name=Redingot Leggings
+item.redingot_boots_item.name=Redingot Boots
+
 # Blocks
 # tile.myfirstmod:red_ore_block.name=Red Ore Block
 tile.red_ore_block.name=Red Ore Block
