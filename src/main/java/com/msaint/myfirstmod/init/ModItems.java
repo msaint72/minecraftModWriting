@@ -16,6 +16,14 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
+	private static final String REDINGOT_HOE_ITEM = "redingot_hoe_item";
+	private static final String REDINGOT_SHOVEL_ITEM = "redingot_shovel_item";
+	private static final String REDINGOT_AXE_ITEM = "redingot_axe_item";
+	private static final String REDINGOT_PICAXE_ITEM = "redingot_picaxe_item";
+	private static final String REDINGOT_SWORD_ITEM = "redingot_sword_item";
+	private static final String TOMATO_ITEM = "tomato_item";
+	private static final String TOMATO_SEED_ITEM = "tomato_seed_item";
+	private static final String REDINGOT_ITEM = "redingot_item";
 	public static Item redingotItem;
 	public static ItemTomatoSeed tomatoSeedItem;
 	public static Item tomatoItem;
@@ -28,52 +36,35 @@ public class ModItems {
 	public static final Item.ToolMaterial toolMaterial=EnumHelper.addToolMaterial("REDINGOT", 2, 1000, 6f,3f,10);
 
 	public static void init() {
-		redingotItem = new ItemRedingot("redingot_item");
-		redingotItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID, "redingot_item"));
-		GameRegistry.register(redingotItem);
-		registerItemModel(redingotItem,"redingot_item");
+		redingotItem = register(new ItemRedingot(REDINGOT_ITEM));
 		
 		//itemTomatoSeed
-		tomatoSeedItem = new ItemTomatoSeed("tomato_seed_item");
-		tomatoSeedItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"tomato_seed_item"));
-		GameRegistry.register(tomatoSeedItem);
-		registerItemModel(tomatoSeedItem,"tomato_seed_item");
+		tomatoSeedItem = (ItemTomatoSeed)register(new ItemTomatoSeed(TOMATO_SEED_ITEM));
 		
 		//itemTomato
-		tomatoItem=new ItemTomato("tomato_item");
-		tomatoItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"tomato_item"));
-		GameRegistry.register(tomatoItem);
-		registerItemModel(tomatoItem,"tomato_item");
+		tomatoItem=register(new ItemTomato(TOMATO_ITEM));
 		
 		//itemRedingotSword
-		redingotSwordItem=new ItemRedingotSword(toolMaterial,"redingot_sword_item");
-		redingotSwordItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"redingot_sword_item"));
-		GameRegistry.register(redingotSwordItem);
-		registerItemModel(redingotSwordItem,"redingot_sword_item");
+		redingotSwordItem=register(new ItemRedingotSword(toolMaterial,REDINGOT_SWORD_ITEM));
 		
 		//itemRedingotPicaxe
-		redingotPicaxeItem=new ItemRedingotPicaxe(toolMaterial,"redingot_picaxe_item");
-		redingotPicaxeItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"redingot_picaxe_item"));
-		GameRegistry.register(redingotPicaxeItem);
-		registerItemModel(redingotPicaxeItem,"redingot_picaxe_item");
+		redingotPicaxeItem=register(new ItemRedingotPicaxe(toolMaterial,REDINGOT_PICAXE_ITEM));
 
 		//itemRedingotAxe
-		redingotAxeItem=new ItemRedingotAxe(toolMaterial,"redingot_axe_item");
-		redingotAxeItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"redingot_axe_item"));
-		GameRegistry.register(redingotAxeItem);
-		registerItemModel(redingotAxeItem,"redingot_axe_item");
+		redingotAxeItem=register(new ItemRedingotAxe(toolMaterial,REDINGOT_AXE_ITEM));
 
 		//itemRedingotShovel
-		redingotShovelItem=new ItemRedingotShovel(toolMaterial,"redingot_shovel_item");
-		redingotShovelItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"redingot_shovel_item"));
-		GameRegistry.register(redingotShovelItem);
-		registerItemModel(redingotShovelItem,"redingot_shovel_item");
+		redingotShovelItem=register(new ItemRedingotShovel(toolMaterial,REDINGOT_SHOVEL_ITEM));
 
 		//itemRedingotHoe
-		redingotHoeItem=new ItemRedingotHoe(toolMaterial,"redingot_hoe_item");
-		redingotHoeItem.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"redingot_hoe_item"));
-		GameRegistry.register(redingotHoeItem);
-		registerItemModel(redingotHoeItem,"redingot_hoe_item");
+		redingotHoeItem=register(new ItemRedingotHoe(toolMaterial,REDINGOT_HOE_ITEM));
+	}
+
+	private static Item register(Item item) {
+		item.setRegistryName(new ResourceLocation(MyFirstMod.MODID,item.getUnlocalizedName().substring(5)));
+		GameRegistry.register(item);
+		registerItemModel(item,item.getUnlocalizedName().substring(5));
+		return item;
 	}
 
 	public static void registerItemModel(Item item,String name) {

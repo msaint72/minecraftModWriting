@@ -9,20 +9,22 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
+	private static final String CROP_TOMATO_BLOCK = "crop_tomato_block";
+	private static final String RED_ORE_BLOCK = "red_ore_block";
 	public static BlockRedOre redOreBlock;
 	public static BlockCropTomato blockCropTomato;
 	public static void init() {
-		redOreBlock=new BlockRedOre("red_ore_block");
-		redOreBlock.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"red_ore_block"));
+		redOreBlock=new BlockRedOre(RED_ORE_BLOCK);
+		redOreBlock.setRegistryName(new ResourceLocation(MyFirstMod.MODID,RED_ORE_BLOCK));
 		GameRegistry.register(redOreBlock);
 
 		ItemBlock itemBlock=new ItemBlock(redOreBlock);
 		GameRegistry.register(itemBlock,redOreBlock.getRegistryName());
-		registerItemModel(itemBlock,"red_ore_block");
+		registerItemModel(itemBlock,RED_ORE_BLOCK);
 		
 		//BlockCropTomato
-		blockCropTomato=new BlockCropTomato("crop_tomato_block");
-		blockCropTomato.setRegistryName(new ResourceLocation(MyFirstMod.MODID,"crop_tomato_block"));
+		blockCropTomato=new BlockCropTomato(CROP_TOMATO_BLOCK);
+		blockCropTomato.setRegistryName(new ResourceLocation(MyFirstMod.MODID,CROP_TOMATO_BLOCK));
 		GameRegistry.register(blockCropTomato);
 		// 
 	}
