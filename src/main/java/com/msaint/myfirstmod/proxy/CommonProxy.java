@@ -1,11 +1,13 @@
 package com.msaint.myfirstmod.proxy;
 
+import com.msaint.myfirstmod.event.CommonEventHandler;
 import com.msaint.myfirstmod.init.ModBlocks;
 import com.msaint.myfirstmod.init.ModItems;
 import com.msaint.myfirstmod.init.ModRecipes;
 import com.msaint.myfirstmod.world.MyWorldGenerator;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -22,6 +24,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("CommonProxy:init");
 		ModRecipes.init();
+		MinecraftForge.EVENT_BUS.register(new CommonEventHandler());
 	}
 
 	public void postInit(FMLPostInitializationEvent event) {

@@ -22,3 +22,5 @@ tile.red_ore_block.name=Red Ore Block
 
 # Creative Tab
 itemGroup.myfirstmod:creative_tab=MyFirst Mod's Tab
+
+block.break.message=Block Broken!
